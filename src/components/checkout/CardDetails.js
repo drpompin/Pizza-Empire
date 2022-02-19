@@ -52,7 +52,7 @@ const CardDetails = ({ handleFormInput, formValues, errorMessage }) => {
 					<div style={{ textAlign: "left" }}>Expiration month</div>
 					<InputField
 						type="number"
-						min={yyyy ? mm : 1}
+						min="1"
 						max="12"
 						name="month"
 						value={formValues.month}

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import Swal from "sweetalert2";
+import { IoIosArrowBack } from "react-icons/io";
 import { CheckoutFormContainer } from "../styles/checkoutFormStyles";
 import { ActionButton } from "../styles/itemDetailStyles";
 import StepDisplay from "./StepDisplay";
-import { IoIosArrowBack } from "react-icons/io";
 
 const CheckoutForm = () => {
 	const [step, setStep] = useState(1);
@@ -67,6 +68,11 @@ const CheckoutForm = () => {
 			setErrorMessage("*You must accept our terms and conditions");
 			return;
 		}
+		Swal.fire(
+			`Thank you ${formValues.first_name}!`,
+			"Your order was successfully booked.",
+			"success"
+		);
 		console.log(values);
 		// alert(JSON.stringify(values));
 	};
