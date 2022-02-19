@@ -35,15 +35,21 @@ The Decorator Design Pattern: This design pattern allows one to change base clas
 
 ### What do you think about Typescript on the front-end?
 
-Having used Typescript on a project sometime in 2021, it is a techonology I appreciate and would definitely love to utilize in my work. It helps to catch mistakes early through a type system and to make JavaScript development more efficient; errors are detected on the go during compilation to JavaScript. TypeScript type inference also makes typing a bit easier and a lot less explicit.
+Having used Typescript on a project sometime in 2021, it is a techonology that I appreciate, and would definitely love to utilize in my work. It helps to catch mistakes early through a type system and to make JavaScript development more efficient; errors are detected on the go during compilation to JavaScript. TypeScript type inference also makes typing a bit easier and a lot less explicit.
 
 ### What are the most important performance issues in React web applications?
 
-React performance issues are mostly to the Virtual DOM which React uses. Wasted renders are a major issue with the Virtual DOM; they can eat up unnecessary CPU and memory resources. In relation to the Virtual DOM, performance related issues in React js originate from: - Redundant processing in components that do not update the DOM - Diff Algorithm keeps on updating leaf nodes that do not need to be updated - Heavy CPU computation due to Diff algorithm updating components
+React performance issues are mostly to the Virtual DOM which React uses. Wasted renders are a major issue with the Virtual DOM; they can eat up unnecessary CPU and memory resources. In relation to the Virtual DOM, performance related issues in React js originate from: 
+  - Redundant processing in components that do not update the DOM.
+  - Diff Algorithm keeps on updating leaf nodes that do not need to be updated.
+  - Heavy CPU computation due to Diff algorithm updating components.
 
 ### How did you decide on the technical and architectural choices used as part of your solution?
 
-The application required me to use React. However, I would also have used React as my framework of choice in building my solution as it allows me to easily get my application on the go. - I employed styled-components to allow for faster and easier styling of my components, especially in writing media queries for mobile responsive. - Redux was employed for my state management. This is a flux architecture and probably the best state management system around for React. Redux is maintainable, makes state predictable, makes debugging easy, is easy to test and has state persistence for retaining data on refresh. - For the design, I took inspiration from different websites and ensured to employ a colour combination that flows with pizza and also gives the application an attractive look and feel.
+The application required me to use React. However, I would also have used React as my framework of choice in building my solution as it allows me to easily get my application on the go. 
+  - I employed styled-components to allow for faster and easier styling of my components, especially in writing media queries for mobile responsive. 
+  - Redux was employed for my state management. This is a flux architecture and probably the best state management system around for React. Redux is maintainable, makes state predictable, makes debugging easy, is easy to test and has state persistence for retaining data on refresh. 
+  - For the design, I took inspiration from different websites and ensured to employ a colour combination that flows with pizza and also gives the application an attractive look and feel.
 
 ### Are there any improvements you could make to your submission?
 
