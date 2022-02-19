@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
 import { IoIosArrowBack } from "react-icons/io";
@@ -6,7 +7,7 @@ import { CheckoutFormContainer } from "../styles/checkoutFormStyles";
 import { ActionButton } from "../styles/itemDetailStyles";
 import StepDisplay from "./StepDisplay";
 
-const CheckoutForm = () => {
+const CheckoutForm = (props) => {
 	const [step, setStep] = useState(1);
 	const [errorMessage, setErrorMessage] = useState("");
 
@@ -74,6 +75,7 @@ const CheckoutForm = () => {
 			"success"
 		);
 		console.log(values);
+		console.log(props.items);
 		// alert(JSON.stringify(values));
 	};
 
@@ -174,4 +176,11 @@ const CheckoutForm = () => {
 	);
 };
 
-export default CheckoutForm;
+const mapStateToProps = (state) => {
+	return {
+		items: state.addedItems,
+		total: state.total,
+	};
+};
+
+export default connect(mapStateToProps)(CheckoutForm);
