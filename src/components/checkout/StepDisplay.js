@@ -9,9 +9,12 @@ import { ItemDetailName, ItemDetailPrice } from "../styles/itemDetailStyles";
 import { CartSummary, CartTotalRow } from "../styles/cartStyles";
 
 const CartItemSummary = (props) => {
-	const totalQuantity = props?.props?.items?.reduce((a, b) => ({
-		quantity: a.quantity + b.quantity,
-	}));
+	const totalQuantity =
+		props?.props?.items.length < 1
+			? ""
+			: props?.props?.items?.reduce((a, b) => ({
+					quantity: a.quantity + b.quantity,
+			  }));
 
 	return (
 		<CartSummary>

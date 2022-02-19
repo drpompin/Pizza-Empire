@@ -101,7 +101,7 @@ const Home = (props) => {
 		(v, i, a) => a.findIndex((t) => t.size === v.size) === i
 	);
 
-	const maxItem = 10;
+	const maxItem = 12;
 	const [page, setPage] = useState(0);
 	const totalItems = props.items.length;
 	const maxPage = Math.ceil(totalItems / maxItem);

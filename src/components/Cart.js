@@ -48,9 +48,12 @@ const Cart = (props) => {
 		props.addToCart(id);
 	};
 
-	const totalQuantity = props?.items?.reduce((a, b) => ({
-		quantity: a.quantity + b.quantity,
-	}));
+	const totalQuantity =
+		props.items.length < 1
+			? ""
+			: props?.items?.reduce((a, b) => ({
+					quantity: a.quantity + b.quantity,
+			  }));
 
 	let itemList = props.items.map((item) => {
 		return <Item handleClick={handleClick} key={item.id} item={item} />;
@@ -164,9 +167,13 @@ const Cart = (props) => {
 					</ItemDetailName>
 				</div>
 
-				<ProductSection style={{ marginBottom: "20px" }}>
-					{itemList}
-				</ProductSection>
+				{props.items.length < 1 ? (
+					""
+				) : (
+					<ProductSection style={{ marginBottom: "20px" }}>
+						{itemList}
+					</ProductSection>
+				)}
 			</>
 		</>
 	);
